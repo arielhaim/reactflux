@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import HomePage from './components/HomePage';
 import AboutPage from './components/about/AboutPage';
+import AuthorPage from './components/authors/AuthorPage';
 import Header from './components/common/Header';
 
 class App extends React.Component{
@@ -10,6 +11,8 @@ class App extends React.Component{
         switch (this.props.route){
             case 'about':
                 Child = AboutPage;break;
+            case 'authors':
+                Child = AuthorPage;break;
             default:
                 Child = HomePage;break;
         }
