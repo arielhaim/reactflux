@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link, Router} from 'react-router-dom';
 import AuthorApi from '../../api/authorApi';
 import AuthorList from './AuthorList';
 
@@ -18,6 +19,7 @@ class AuthorPage extends React.Component{
         return(
             <div>
                 <h1>Authors</h1>
+                <Link to="Author" className="btn btn-default">Add Author</Link>
                 <AuthorList authors={this.state.authors} />                        
             </div>
         );        
